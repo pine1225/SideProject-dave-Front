@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "ZEN-SERIF-Regular";
+  src: url("/font/ZEN-SERIF-TTF-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  font-family: "ZEN-SERIF-Regular", sans-serif;
+  /* background-color: red; */
+  margin: 0;
+  padding: 0;
+}
