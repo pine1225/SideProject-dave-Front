@@ -1,8 +1,31 @@
 .container {
   display: flex;
   justify-content: space-between;
-  background-color: greenyellow;
+  background-color: gainsboro;
+  font-weight: bold;
 }
 
 .nav_left {
+  display: flex;
+  gap: 5px;
+}
+
+.nav_left a,
+.nav_right a {
+  padding: 10px 20px;
+  /* background-color: red; */
+  align-items: center;
+  height: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 50px;
+}
+
+.nav_left a:has(img),
+.nav_right a:has(img) {
+  padding: 10px 10px;
+}
+
+.nav_right {
+  display: flex;
 }

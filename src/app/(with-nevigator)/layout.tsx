@@ -1,3 +1,4 @@
+import Footer from "../components/footer";
 import Nevigator from "../components/nevigator";
 
 export default function RootLayout({
@@ -7,9 +8,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Nevigator />
-      <body>{children}</body>
-      <footer>풋터여</footer>
+      <body>
+        <Nevigator />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

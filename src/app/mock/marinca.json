@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "idx": 1,
+      "marineName": "흰동가리",
+      "marineCategory": "블루홀 초입",
+      "marineActive": "낮",
+      "marineImg": "https://nng-phinf.pstatic.net/MjAyMzA3MjVfMTA4/MDAxNjkwMjExNDQ3MjIx.kXRly6noqaFk5zYBBVOtnUZOuF_Wk5alLcpEyKqMxgAg.mb0G2d6B-7xmdACY89rvJ6mSG8aRXbrZhgxfg7mfMmMg.PNG/marinca_1.png",
+      "marineDetail": "붉은 몸에 흰 세로줄이 있는 15cm 정도의 물고기, 홍해와 태평양, 동남아시아, 인도양의 따듯한 해역에 서식한다.\n말미잘 속에 숨어, 기생충을 청소해준다.",
+      "marineSize": "15cm",
+      "marineLocation": "0 ~ 50m",
+      "marineRank": "1",
+      "marineReality": null
+    },
+    {
+      "idx": 2,
+      "marineName": "흰동가리",
+      "marineCategory": "블루홀 초입",
+      "marineActive": "낮",
+      "marineImg": "https://nng-phinf.pstatic.net/MjAyMzA3MjVfMTA4/MDAxNjkwMjExNDQ3MjIx.kXRly6noqaFk5zYBBVOtnUZOuF_Wk5alLcpEyKqMxgAg.mb0G2d6B-7xmdACY89rvJ6mSG8aRXbrZhgxfg7mfMmMg.PNG/marinca_1.png",
+      "marineDetail": "붉은 몸에 흰 세로줄이 있는 15cm 정도의 물고기, 홍해와 태평양, 동남아시아, 인도양의 따듯한 해역에 서식한다.\n말미잘 속에 숨어, 기생충을 청소해준다.",
+      "marineSize": "15cm",
+      "marineLocation": "0 ~ 50m",
+      "marineRank": "1",
+      "marineReality": null
+    },
+    {
+      "idx": 3,
+      "marineName": "흰동가리",
+      "marineCategory": "블루홀 초입",
+      "marineActive": "낮",
+      "marineImg": "https://nng-phinf.pstatic.net/MjAyMzA3MjVfMTA4/MDAxNjkwMjExNDQ3MjIx.kXRly6noqaFk5zYBBVOtnUZOuF_Wk5alLcpEyKqMxgAg.mb0G2d6B-7xmdACY89rvJ6mSG8aRXbrZhgxfg7mfMmMg.PNG/marinca_1.png",
+      "marineDetail": "붉은 몸에 흰 세로줄이 있는 15cm 정도의 물고기, 홍해와 태평양, 동남아시아, 인도양의 따듯한 해역에 서식한다.\n말미잘 속에 숨어, 기생충을 청소해준다.",
+      "marineSize": "15cm",
+      "marineLocation": "0 ~ 50m",
+      "marineRank": "1",
+      "marineReality": null
+    },
+    {
+      "idx": 4,
+      "marineName": "콤버",
+      "marineCategory": "블루홀 초입",
+      "marineActive": "낮",
+      "marineImg": "https://nng-phinf.pstatic.net/MjAyMzA3MjVfNDcg/MDAxNjkwMjExNDQ3NzY5.RZBWvzGH6oDo966EGmpzk8mfDb-SXZJyk4eS2DWpniAg.kT5ia3lCNzrYTdlUMjH01HTO1a7QOa9FfTgaC-4W3Wgg.PNG/marinca_2.png",
+      "marineDetail": "큰 머리와 돌출된 턱, 오렌지색의 긴 가로줄과 여러 개의 세로 줄무늬가 특징인 25cm정도의 물고기. 암초나 대륙붕 등에 넓게 서식한다.",
+      "marineSize": "15cm",
+      "marineLocation": "0 ~ 50m",
+      "marineRank": "1",
+      "marineReality": null
+    },
+    {
+      "idx": 5,
+      "marineName": "지중해카디널피쉬",
+      "marineCategory": "블루홀 초입",
+      "marineActive": "낮",
+      "marineImg": "https://nng-phinf.pstatic.net/MjAyMzA3MjVfMTc1/MDAxNjkwMjExNDQ3OTEx.FKatZVpNxIlBtWznOzil9PnaMNSsD5vuUAXJRK6TJ5Yg.IRubf6dsyKQ5om-fCV3uKG6ztfnefOP-osk4xAMXib4g.PNG/marinca_3.png",
+      "marineDetail": "큰 머리와, 매우 큰 눈, 계란형 몸을 가진 5 ~ 20cm 정도의 루비빛 물고기. 암초나 동굴 속에 숨어살며 작은 물고기나 플랑크톤 등을 먹는다.",
+      "marineSize": "6cm",
+      "marineLocation": "0 ~ 50m",
+      "marineRank": "1",
+      "marineReality": null
+    }
+  ],
+  "count": 53,
+  "message": "ok",
+  "category": "블루홀 초입"
+}
