@@ -13,7 +13,7 @@ export interface MarincaItem {
 
 export interface MarincaData {
   data: MarincaItem[];
-  count: number;
+  count: number | null;
   message: string;
-  category: string;
+  category: string | null;
 }

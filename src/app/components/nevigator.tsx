@@ -6,7 +6,7 @@ export default function Nevigator() {
   return (
     <div className={style.container}>
       <div className={style.nav_left}>
-        <Link href={`/`}>
+        <Link href={`https://pressmintrocket.oopy.io/dave_the_diver_kr`}>
           <Image
             src="/assets/logo/mintrocket_logo.png"
             alt="Game logo"

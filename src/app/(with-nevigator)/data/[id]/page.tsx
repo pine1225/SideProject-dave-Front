@@ -1,5 +1,6 @@
 import GameItem from "@/app/components/game-item";
-import mockData from "@/app/mock/marinca.json";
+import Searchbar from "@/app/components/searchbar";
+import { notFound, useSearchParams } from "next/navigation";
 
 export default async function Page({
   params,
@@ -8,15 +9,24 @@ export default async function Page({
 }) {
   const { id } = await params;
 
-  // async function marincaDataFetch() {
-  //   const response = await fetch(
+  const response = await fetch(
+    `${process.env.BOOT_API_SERVER_URL}/api/data/marinca/${id}`
+  );
 
-  //   )
-  // }
+  if (!response.ok) {
+    if (response.status === 404) {
+      notFound();
+    }
+  }
+
+  const categoryData = await response.json();
+
+  const { data, count, message, category } = categoryData;
 
   return (
     <div>
-      <GameItem {...mockData} />
+      <Searchbar />
+      <GameItem {...categoryData} />
     </div>
   );
 }

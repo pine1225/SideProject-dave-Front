@@ -6,12 +6,17 @@
   gap: 20px;
   flex-direction: column;
   padding: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 .item_container {
   display: flex;
   gap: 10px;
+}
+
+.activeItem {
+  background-color: rgba(255, 255, 0, 0.2); /* 예시 강조색 */
+  transition: background-color 0.3s;
 }
 
 .data_container {
@@ -20,7 +25,7 @@
 }
 
 .data_container h3 {
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 .data_container h4 {
@@ -52,7 +57,7 @@
 
 .ability {
   /* border: 1px solid rgb(230, 230, 230); */
-  width: 500px;
+  width: 450px;
   /* border-collapse: collapse; */
 }
 
@@ -61,4 +66,17 @@
   text-align: left;
   font-weight: 500;
   /* border: 1px solid rgb(230, 230, 230); */
+}
+
+.pagination {
+  margin-top: 16px;
+}
+
+.pageButton {
+  margin-right: 8px;
+}
+
+.activePage {
+  font-weight: bold;
+  margin-right: 8px;
 }

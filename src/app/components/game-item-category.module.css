@@ -1,0 +1,34 @@
+.button_container {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 5개씩 */
+  gap: 10px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.container div {
+  cursor: pointer;
+}
+
+.container h3 {
+  text-align: center;
+  margin: 5px 0;
+  width: 150px;
+  font-weight: 16px;
+}
+
+.div_container {
+  display: flex;
+  width: 1000px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
