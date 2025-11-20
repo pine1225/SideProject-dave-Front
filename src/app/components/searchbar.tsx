@@ -21,7 +21,7 @@ export default function Searchbar() {
 
   const onSubmit = () => {
     if (!search || q === search) return;
-    router.push(`/data/search?q=${search}`);
+    router.push(`/data/marinca/search?q=${search}`);
   };
 
   const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {

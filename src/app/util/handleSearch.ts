@@ -21,5 +21,5 @@ export function handleClick(items: MarincaItem[], detail: MarincaItem) {
   //     `/data/${id}?page=${pageNum}&item=${itemIndex}&idx=${detail.idx}`
   //   );
 
-  return `/data/${id}?page=${pageNum}&item=${itemIndex}&idx=${detail.idx}`;
+  return `/data/marinca/${id}?page=${pageNum}&item=${itemIndex}&idx=${detail.idx}`;
 }

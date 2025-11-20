@@ -3,10 +3,10 @@
 import { MarincaData, MarincaItem } from "@/types";
 import style from "./game-item-category.module.css";
 import Image from "next/image";
-import { use, useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { categoryFilter } from "../util/categoryFilter";
 import { handleClick } from "../util/handleSearch";
+import GameMarincaCategory from "./game-marinca-category";
 
 const CATEGORY_LIST = [
   "전체",
@@ -43,20 +43,6 @@ export default function GameItemCategory({
 
   return (
     <div>
-      <div className={style.div_container}>
-        <div>상세 보기</div>
-        {CATEGORY_LIST.slice(1).map((c) => (
-          <div
-            key={c}
-            onClick={() => {
-              setPageCategory(c);
-              router.push(`data/${categoryFilter(c)}`);
-            }}
-          >
-            {c}
-          </div>
-        ))}
-      </div>
       <div className={style.button_container}>
         {CATEGORY_LIST.map((c) => (
           <button key={c} onClick={() => setPageCategory(c)}>

@@ -24,7 +24,6 @@ export function categoryFilter(category: string) {
       id = "7";
       break;
   }
-  if (id === "") return;
 
   return id;
 }

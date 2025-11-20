@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import style from "./nevigator.module.css";
+import { useState } from "react";
 
 export default function Nevigator() {
   return (
@@ -22,7 +23,7 @@ export default function Nevigator() {
             height={50}
           />
         </Link>
-        <Link href={`/data`}>게임 정보</Link>
+        <Link href={"/data/marinca"}>게임 정보</Link>
         <Link href={`/notice`}>새 소식</Link>
         <Link href={`/board`}>커뮤니티</Link>
       </div>

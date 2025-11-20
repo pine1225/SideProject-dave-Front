@@ -25,10 +25,3 @@
   width: 150px;
   font-weight: 16px;
 }
-
-.div_container {
-  display: flex;
-  width: 1000px;
-  justify-content: space-between;
-  margin: 0 auto;
-}

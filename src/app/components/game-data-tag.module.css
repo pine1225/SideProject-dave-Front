@@ -1,0 +1,10 @@
+.tag ul {
+  list-style: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.tag li:not(:first-child) {
+  margin: 10px 0;
+  padding: 0 0 0 10px;
+}

@@ -28,6 +28,10 @@ async function SearchResult({ q }: { q: string }) {
     normalize(item.marineName).includes(normalize(q))
   );
 
+  if (result.length === 0) {
+    return <div className={style.no_content}>검색결과가 없습니다.</div>;
+  }
+
   allData.data = result;
 
   return (

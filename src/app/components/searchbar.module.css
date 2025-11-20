@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  margin: 0 auto;
+  background-color: red;
+}
+
+.container input {
+  width: 900px;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.container button {
+  width: 100px;
+  font-weight: bold;
+  border: none;
+}

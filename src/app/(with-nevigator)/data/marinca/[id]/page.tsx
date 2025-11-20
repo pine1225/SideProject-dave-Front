@@ -1,4 +1,5 @@
 import GameItem from "@/app/components/game-item";
+import GameMarincaCategory from "@/app/components/game-marinca-category";
 import Searchbar from "@/app/components/searchbar";
 import { notFound, useSearchParams } from "next/navigation";
 
@@ -25,6 +26,7 @@ export default async function Page({
 
   return (
     <div>
+      <GameMarincaCategory />
       <Searchbar />
       <GameItem {...categoryData} />
     </div>

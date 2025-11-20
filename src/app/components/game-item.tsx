@@ -69,12 +69,12 @@ export default function GameItem({
   function btnGoPage(num: number) {
     console.log(q);
     if (q) {
-      console.log(`/data/search?q=${q}&page=${num}`);
-      router.push(`/data/search?q=${q}&page=${num}`);
+      // console.log(`/data/search?q=${q}&page=${num}`);
+      router.push(`/data/marinca/search?q=${q}&page=${num}`);
       return;
     }
 
-    router.push(`?page=${num}`);
+    router.push(`/marinca/?page=${num}`);
   }
 
   return (

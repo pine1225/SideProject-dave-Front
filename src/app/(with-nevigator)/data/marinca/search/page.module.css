@@ -16,3 +16,9 @@
   width: 150px;
   font-weight: 16px;
 }
+
+.no_content {
+  width: 1100px;
+  margin: 0 auto;
+  background-color: tomato;
+}

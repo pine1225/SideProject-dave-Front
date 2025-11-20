@@ -17,3 +17,22 @@ export interface MarincaData {
   message: string;
   category: string | null;
 }
+
+export interface WeaponItem {
+  weaponName: string;
+  weaponCategory: string;
+  weaponImg: string;
+  weaponDetail: string;
+  weaponDamage: string;
+  weaponDistance: string;
+  weaponNumber: string;
+  weaponProperties: string;
+  weaponMaterialName: string;
+  weaponMaterialNumber: string;
+  widx: number;
+}
+
+export interface WeaponData {
+  data: WeaponItem[];
+  message: string;
+}
