@@ -14,3 +14,7 @@ body {
   padding: 0;
   background-color: #448be5;
 }
+
+ul {
+  list-style: none;
+}

@@ -1,0 +1,44 @@
+.container {
+  display: grid;
+  width: 1100px;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr); /* 5개씩 */
+  gap: 10px;
+}
+
+.all_container {
+  display: flex;
+  gap: 5px;
+}
+.right_container {
+  display: flex;
+  gap: 5px;
+}
+
+.left_item_detail {
+  width: 180px;
+}
+
+.left_item_detail div:nth-child(1),
+.right_item_meterial_title {
+  font-weight: bold;
+  font-size: 17px;
+  margin-top: 5px;
+}
+.left_item_detail div:nth-child(2) {
+  font-size: 14px;
+}
+.right_item_meterial {
+  width: 245px;
+}
+
+.right_item_detail_container {
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+}
+
+.pagination {
+  width: 1100px;
+  margin: 0 auto;
+}

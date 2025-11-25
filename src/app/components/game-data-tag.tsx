@@ -25,6 +25,9 @@ export default function GameDataTag() {
           <Link href={"/data/farm"}>┗ FARM</Link>
         </li>
         <li>
+          <Link href={"/data/tailsman"}>┗ 부적</Link>
+        </li>
+        <li>
           <Link href={"/data/music"}>┗ 음악</Link>
         </li>
       </ul>

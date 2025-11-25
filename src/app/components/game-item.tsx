@@ -5,6 +5,7 @@ import style from "./game-item.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { categoryFilter } from "../util/categoryFilter";
 
 const ITEMS_PER_PAGE = 7;
 
@@ -31,6 +32,7 @@ export default function GameItem({
   const currentItems = data.slice(startIdx, startIdx + ITEMS_PER_PAGE);
 
   const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
+  const id = categoryFilter(data[0].marineCategory);
 
   // scroll
   // useEffect(() => {
@@ -68,13 +70,14 @@ export default function GameItem({
 
   function btnGoPage(num: number) {
     console.log(q);
+
     if (q) {
       // console.log(`/data/search?q=${q}&page=${num}`);
       router.push(`/data/marinca/search?q=${q}&page=${num}`);
       return;
     }
 
-    router.push(`/marinca/?page=${num}`);
+    router.push(`/data/marinca/${id}?page=${num}`);
   }
 
   return (
