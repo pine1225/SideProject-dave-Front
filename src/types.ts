@@ -102,6 +102,7 @@ export interface MusicItem {
   musicTrack: string;
   musicComposer: string;
   musicImg: string;
+  musicUrl: string;
   midx: number;
 }
 

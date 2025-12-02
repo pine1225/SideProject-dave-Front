@@ -1,0 +1,45 @@
+.container {
+  display: grid;
+  width: 1100px;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr); /* 5개씩 */
+}
+
+.item_container {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+}
+
+.item_container_img {
+  display: flex;
+}
+
+.item_detail div:nth-child(1) {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px;
+}
+
+.item_detail div:nth-child(2) {
+  margin-left: 10px;
+}
+
+.bottom_container {
+  display: flex;
+}
+
+.bottom_container ul {
+  padding: 0;
+}
+
+.bottom_skils {
+  width: 100px;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.bottom_add {
+  width: 330px;
+}

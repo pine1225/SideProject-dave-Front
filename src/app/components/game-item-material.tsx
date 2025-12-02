@@ -8,7 +8,11 @@ import { useEffect, useState } from "react";
 
 const ITEMS_PER_PAGE = 12;
 
-export default function GameItemMaterial({ data, message }: MaterialData) {
+export default function GameItemMaterial({
+  data,
+  message,
+  q,
+}: MaterialData & { q: string }) {
   const searchParams = useSearchParams();
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -29,6 +33,11 @@ export default function GameItemMaterial({ data, message }: MaterialData) {
   }, [pageParam, currentItems]);
 
   function btnGoPage(num: number) {
+    if (q) {
+      router.push(`/data/material/search?q=${q}&page=${num}`);
+      return;
+    }
+
     router.push(`/data/material?page=${num}`);
   }
 

@@ -1,5 +1,6 @@
 import GameDataTag from "@/app/components/game-data-tag";
 import GameItemMaterial from "@/app/components/game-item-material";
+import SearchbarMaterial from "@/app/components/searchbar-material";
 import { notFound } from "next/navigation";
 
 export default async function Page() {
@@ -21,6 +22,7 @@ export default async function Page() {
     <div>
       <GameDataTag />
       <div>
+        <SearchbarMaterial />
         <GameItemMaterial {...allData} />
       </div>
     </div>

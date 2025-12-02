@@ -8,7 +8,11 @@ import { useEffect, useState } from "react";
 
 const ITEMS_PER_PAGE = 9;
 
-export default function GameItemWeapon({ data, message }: WeaponData) {
+export default function GameItemWeapon({
+  data,
+  message,
+  q,
+}: WeaponData & { q: string }) {
   const searchParams = useSearchParams();
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -30,6 +34,12 @@ export default function GameItemWeapon({ data, message }: WeaponData) {
   }, [pageParam, currentItems]);
 
   function btnGoPage(num: number) {
+    console.log(q);
+    if (q) {
+      router.push(`/data/weapon/search?q=${q}&page=${num}`);
+      return;
+    }
+
     router.push(`/data/weapon?page=${num}`);
   }
 

@@ -1,5 +1,6 @@
 import GameDataTag from "@/app/components/game-data-tag";
 import GameItemCookmenu from "@/app/components/game-item-cookmenu";
+import SearchCookmenu from "@/app/components/searchbar-cookmenu";
 import { notFound } from "next/navigation";
 
 export default async function Page() {
@@ -20,6 +21,7 @@ export default async function Page() {
   return (
     <div>
       <GameDataTag />
+      <SearchCookmenu />
       <div>
         <GameItemCookmenu {...allData} />
       </div>

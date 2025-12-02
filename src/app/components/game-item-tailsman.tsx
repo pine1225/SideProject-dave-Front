@@ -1,20 +1,22 @@
 import { TailsmanData } from "@/types";
 import Image from "next/image";
-import { it } from "node:test";
+import style from "./game-item-tailsman.module.css";
 
 export default function GameItemTailsman({ data, message }: TailsmanData) {
   return (
-    <div>
+    <div className={style.container}>
       {data.map((item) => (
-        <div key={item.tidx}>
+        <div key={item.tidx} className={style.item_container}>
           <Image
             src={item.talismanImg}
             alt={item.talismanName}
-            width={200}
-            height={200}
+            width={180}
+            height={180}
           />
-          <div>{item.talismanName}</div>
-          <div>{item.talismanDetail}</div>
+          <div className={style.item_info}>
+            <div>{item.talismanName}</div>
+            <div>{item.talismanDetail}</div>
+          </div>
         </div>
       ))}
     </div>

@@ -7,7 +7,11 @@ import { useEffect, useState } from "react";
 
 const ITEMS_PER_PAGE = 20;
 
-export default function GameItemCookmenu({ data, message }: CookmenuData) {
+export default function GameItemCookmenu({
+  data,
+  message,
+  q,
+}: CookmenuData & { q: string }) {
   const searchParams = useSearchParams();
   const [currentPage, setCurrentPage] = useState(1);
 

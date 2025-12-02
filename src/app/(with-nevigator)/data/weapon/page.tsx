@@ -5,6 +5,7 @@ import GameMarincaCategory from "@/app/components/game-marinca-category";
 import Searchbar from "@/app/components/searchbar";
 import GameItemCategory from "@/app/components/game-item-category";
 import GameItemWeapon from "@/app/components/game-item-weapon";
+import SearchbarWeapon from "@/app/components/searchbar-weapon";
 
 export default async function Page() {
   const response = await fetch(
@@ -24,6 +25,7 @@ export default async function Page() {
   return (
     <div className={style.main_content}>
       <GameDataTag />
+      <SearchbarWeapon />
       <div className={style.main_data}>
         <GameItemWeapon {...allData} />
       </div>
