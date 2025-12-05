@@ -8,7 +8,9 @@
 .item_container {
   display: flex;
   flex-direction: column;
-  height: 450px;
+  /* height: 450px; */
+  margin: 15px;
+  border: 1px solid #ccc;
 }
 
 .item_container_img {
@@ -17,8 +19,8 @@
 
 .item_detail div:nth-child(1) {
   font-weight: bold;
-  font-size: 18px;
-  margin: 10px;
+  font-size: 20px;
+  margin: 15px;
 }
 
 .item_detail div:nth-child(2) {
@@ -34,7 +36,7 @@
 }
 
 .bottom_skils {
-  width: 100px;
+  width: 90px;
   margin-top: 20px;
   text-align: center;
   font-weight: bold;

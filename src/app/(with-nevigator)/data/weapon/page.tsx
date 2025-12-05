@@ -23,10 +23,10 @@ export default async function Page() {
   const { data, message } = allData;
 
   return (
-    <div className={style.main_content}>
+    <div className={style.container}>
       <GameDataTag />
-      <SearchbarWeapon />
       <div className={style.main_data}>
+        <SearchbarWeapon />
         <GameItemWeapon {...allData} />
       </div>
     </div>

@@ -42,37 +42,39 @@ export default function GameItemMaterial({
   }
 
   return (
-    <div className={style.container}>
-      {currentItems.map((item) => (
-        <div key={item.midx}>
-          <div className={style.all_container}>
-            <div className={style.left_item_detail}>
-              <Image
-                src={item.materialImg}
-                alt={item.materialName}
-                width={200}
-                height={200}
-              />
-              <div className={style.item_detail}>
-                <div className={style.title}>{item.materialName}</div>
-                <div>분류 {item.materialCategory}</div>
-              </div>
-              <div className={style.item_material_detail}>
-                {item.materialDetail}
-              </div>
-            </div>
-            <div>
-              <div className={style.p_menu_title}>가능한 메뉴</div>
-              {item.materialMenu.split(",").map((name, index) => (
-                <div key={index} className={style.p_menu}>
-                  {name.trim()}
+    <div>
+      <div className={style.container}>
+        {currentItems.map((item) => (
+          <div key={item.midx}>
+            <div className={style.all_container}>
+              <div className={style.left_item_detail}>
+                <Image
+                  src={item.materialImg}
+                  alt={item.materialName}
+                  width={180}
+                  height={180}
+                />
+                <div className={style.item_detail}>
+                  <div className={style.title}>{item.materialName}</div>
+                  <div>분류 {item.materialCategory}</div>
                 </div>
-              ))}
+                <div className={style.item_material_detail}>
+                  {item.materialDetail}
+                </div>
+              </div>
+              <div>
+                <div className={style.p_menu_title}>가능한 메뉴</div>
+                {item.materialMenu.split(",").map((name, index) => (
+                  <div key={index} className={style.p_menu}>
+                    {name.trim()}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-      {/* 페이지 버튼 */}
+        ))}
+        {/* 페이지 버튼 */}
+      </div>
       <div className={style.pagination}>
         {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => (
           <button

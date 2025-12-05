@@ -11,8 +11,8 @@ export default function GameItemEmployee({ data, message }: EmployeeData) {
             <Image
               src={item.employeeImg}
               alt={item.employeeName}
-              width={200}
-              height={200}
+              width={180}
+              height={180}
             />
             <div className={style.item_detail}>
               <div>{item.employeeName}</div>

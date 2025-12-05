@@ -3,4 +3,25 @@
   width: 1000px;
   justify-content: space-between;
   margin: 0 auto;
+  padding: 20px 0;
+}
+
+.container div {
+  /* background-color: red; */
+  padding: 5px;
+  cursor: pointer;
+  border-bottom: 1px solid #080561; /* 연한 라인 */
+  transition: color 0.2s ease;
+  color: #333;
+  font-weight: bold;
+}
+
+.container div:hover {
+  color: #1e40af;
+}
+
+.container div.active {
+  border-bottom: 3px solid #2563eb;
+  font-weight: bold;
+  color: #2563eb;
 }

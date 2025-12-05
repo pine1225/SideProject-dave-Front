@@ -4,10 +4,12 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  background-color: white;
 }
 
 .item_container {
   display: flex;
+  margin: 15px 15px 0 15px;
 }
 
 .item_info div:nth-child(1) {

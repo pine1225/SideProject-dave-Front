@@ -5,6 +5,7 @@ import Searchbar from "@/app/components/searchbar";
 import { handleClick } from "@/app/util/handleSearch";
 import style from "./page.module.css";
 import GameItem from "@/app/components/game-item";
+import GameDataTag from "@/app/components/game-data-tag";
 
 async function SearchResult({ q }: { q: string }) {
   const response = await fetch(
@@ -62,9 +63,12 @@ export default async function Page({
   //   console.log(q);
 
   return (
-    <div>
-      <Searchbar />
-      <SearchResult q={q || ""} />
+    <div className={style.container}>
+      <GameDataTag />
+      <div className={style.item_container}>
+        <Searchbar />
+        <SearchResult q={q || ""} />
+      </div>
     </div>
   );
 }

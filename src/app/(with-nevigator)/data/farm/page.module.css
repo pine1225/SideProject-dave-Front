@@ -1,10 +1,11 @@
 .container {
   width: 1250px;
   display: flex;
-  justify-content: space-between;
   margin: 0 auto;
+  justify-content: space-between;
 }
 
-.main_data {
+.item_container {
+  width: 1100px;
   background-color: white;
 }

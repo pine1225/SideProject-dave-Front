@@ -9,6 +9,7 @@
 .item_container {
   display: flex;
   flex-wrap: wrap;
+  margin: 15px 15px 0 15px;
 }
 
 .item_info {
@@ -17,7 +18,7 @@
 
 .item_info div:nth-child(1) {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   margin: 10px;
 }
 

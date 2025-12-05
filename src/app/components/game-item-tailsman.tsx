@@ -10,8 +10,8 @@ export default function GameItemTailsman({ data, message }: TailsmanData) {
           <Image
             src={item.talismanImg}
             alt={item.talismanName}
-            width={180}
-            height={180}
+            width={160}
+            height={160}
           />
           <div className={style.item_info}>
             <div>{item.talismanName}</div>

@@ -3,6 +3,8 @@ import GameItemCookmenu from "@/app/components/game-item-cookmenu";
 import SearchCookmenu from "@/app/components/searchbar-cookmenu";
 import { CookmenuItem } from "@/types";
 import { notFound } from "next/navigation";
+import style from "./page.module.css";
+import GameDataTag from "@/app/components/game-data-tag";
 
 async function SearchResult({ q }: { q: string }) {
   const response = await fetch(
@@ -44,9 +46,12 @@ export default async function Page({
   const { q } = await searchParams;
 
   return (
-    <div>
-      <SearchCookmenu />
-      <SearchResult q={q || ""} />
+    <div className={style.container}>
+      <GameDataTag />
+      <div className={style.item_container}>
+        <SearchCookmenu />
+        <SearchResult q={q || ""} />
+      </div>
     </div>
   );
 }

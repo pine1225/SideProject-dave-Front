@@ -2,6 +2,7 @@ import GameDataTag from "@/app/components/game-data-tag";
 import GameItemCookmenu from "@/app/components/game-item-cookmenu";
 import SearchCookmenu from "@/app/components/searchbar-cookmenu";
 import { notFound } from "next/navigation";
+import style from "./page.module.css";
 
 export default async function Page() {
   const response = await fetch(
@@ -19,10 +20,10 @@ export default async function Page() {
   const { data, message } = allData;
 
   return (
-    <div>
+    <div className={style.container}>
       <GameDataTag />
-      <SearchCookmenu />
-      <div>
+      <div className={style.item_container}>
+        <SearchCookmenu />
         <GameItemCookmenu {...allData} />
       </div>
     </div>

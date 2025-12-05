@@ -1,6 +1,7 @@
 import GameDataTag from "@/app/components/game-data-tag";
 import GameItemFarm from "@/app/components/game-item-farm";
 import { notFound } from "next/navigation";
+import style from "./page.module.css";
 
 export default async function Page() {
   const response = await fetch(
@@ -17,9 +18,9 @@ export default async function Page() {
 
   const { data, message } = allData;
   return (
-    <div>
+    <div className={style.container}>
       <GameDataTag />
-      <div>
+      <div className={style.item_container}>
         <GameItemFarm {...allData} />
       </div>
     </div>

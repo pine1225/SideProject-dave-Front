@@ -16,7 +16,7 @@ const CATEGORY_LIST = [
   "해마",
 ];
 
-export default function GameMarincaCategory() {
+export default function GameMarincaCategory({ id }: { id?: string }) {
   const router = useRouter();
   const [pageCategory, setPageCategory] = useState("전체");
 
@@ -29,6 +29,7 @@ export default function GameMarincaCategory() {
             setPageCategory(c);
             router.push(`/data/marinca/${categoryFilter(c)}`);
           }}
+          className={id === categoryFilter(c) ? style.active : style.deactivate}
         >
           {c}
         </div>

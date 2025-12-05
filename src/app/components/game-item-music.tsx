@@ -12,8 +12,8 @@ export default function GameItemMusic({ data, message }: MusicData) {
             <Image
               src={item.musicImg}
               alt={item.musicName}
-              width={150}
-              height={150}
+              width={180}
+              height={180}
             />
           </Link>
           <div className={style.item_title}>{item.musicName}</div>

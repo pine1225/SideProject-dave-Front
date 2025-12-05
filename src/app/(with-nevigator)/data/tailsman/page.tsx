@@ -1,6 +1,7 @@
 import GameDataTag from "@/app/components/game-data-tag";
 import GameItemTailsman from "@/app/components/game-item-tailsman";
 import { notFound } from "next/navigation";
+import style from "./page.module.css";
 
 export default async function Page() {
   const response = await fetch(
@@ -18,7 +19,7 @@ export default async function Page() {
   const { data, message } = allData;
 
   return (
-    <div>
+    <div className={style.container}>
       <GameDataTag />
       <div>
         <GameItemTailsman {...allData} />

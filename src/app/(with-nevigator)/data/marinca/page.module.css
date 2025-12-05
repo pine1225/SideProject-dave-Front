@@ -1,18 +1,19 @@
 .main_content {
-  width: 1350px;
+  width: 1250px;
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
 }
 
 .main_data {
   width: 1100px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   background-color: white;
 }
 
 .container {
-  width: 900px;
+  width: 1100px;
   margin: 0 auto;
   display: flex;
   gap: 20px;

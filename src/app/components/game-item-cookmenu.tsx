@@ -33,6 +33,10 @@ export default function GameItemCookmenu({
   }, [pageParam, currentItems]);
 
   function btnGoPage(num: number) {
+    if (q) {
+      router.push(`/data/cookmenu/search?q=${q}&page=${num}`);
+      return;
+    }
     router.push(`/data/cookmenu?page=${num}`);
   }
 
@@ -44,8 +48,8 @@ export default function GameItemCookmenu({
             <Image
               src={item.cookImg}
               alt={item.cookName}
-              width={130}
-              height={140}
+              width={150}
+              height={150}
             />
             <div className={style.right_container}>
               <div className={style.left_item_detail}>

@@ -46,7 +46,7 @@ export default function GameItemCategory({
       <div className={style.button_container}>
         {CATEGORY_LIST.map((c) => (
           <button key={c} onClick={() => setPageCategory(c)}>
-            {c}
+            {`[ ${c} ]`}
           </button>
         ))}
       </div>
