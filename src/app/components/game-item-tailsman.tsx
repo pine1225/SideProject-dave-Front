@@ -12,6 +12,7 @@ export default function GameItemTailsman({ data, message }: TailsmanData) {
             alt={item.talismanName}
             width={160}
             height={160}
+            style={{ borderRadius: "5px" }}
           />
           <div className={style.item_info}>
             <div>{item.talismanName}</div>

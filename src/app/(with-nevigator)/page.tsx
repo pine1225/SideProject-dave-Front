@@ -12,8 +12,15 @@ export default function Home() {
           playsInline
         ></video>
       </div>
-      <div></div>
-      <div></div>
+      <div className={style.middle_content}>
+        <div className={style.notice}></div>
+        <div className={style.game_start}></div>
+        <div className={style.board}></div>
+      </div>
+      <div className={style.last_content}>
+        <div className={style.game_img}></div>
+        <div className={style.game_explain}></div>
+      </div>
     </div>
   );
 }

@@ -5,6 +5,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   background-color: white;
+  padding-top: 20px;
 }
 
 .item_container {

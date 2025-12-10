@@ -53,6 +53,7 @@ export default function GameItemMaterial({
                   alt={item.materialName}
                   width={180}
                   height={180}
+                  style={{ borderRadius: "8px" }}
                 />
                 <div className={style.item_detail}>
                   <div className={style.title}>{item.materialName}</div>

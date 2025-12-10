@@ -59,6 +59,7 @@ export default function GameItemCategory({
               alt={item.marineName}
               width={150}
               height={150}
+              style={{ borderRadius: "10px" }}
             />
             <h3>{item.marineName}</h3>
           </div>

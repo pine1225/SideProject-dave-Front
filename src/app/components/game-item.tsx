@@ -96,6 +96,7 @@ export default function GameItem({
               alt={item.marineName}
               width={250}
               height={250}
+              style={{ borderRadius: "10px" }}
             />
           </div>
           <div className={style.data_container}>

@@ -1,0 +1,117 @@
+/* .container {
+  width: 1250px;
+  background-color: red;
+  margin: 0 auto;
+} */
+
+/* Footer.module.css */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 2rem auto 3rem;
+  padding: 1.25rem;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  background: transparent;
+  color: #e6e6e6; /* 눈에 거슬리지 않는 밝은 텍스트 */
+  text-align: center;
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5;
+}
+
+/* 헤더 */
+.container h4 {
+  margin: 0;
+  font-size: 1rem; /* 16px */
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* 링크 영역 */
+.links {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+.links a {
+  font-size: 0.85rem;
+  text-decoration: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  transition: background-color 0.15s ease, transform 0.12s ease;
+}
+
+/* 호버는 색상 대신 반투명 배경 사용 (접근성 고려) */
+.links a:hover,
+.links a:focus {
+  background: rgba(255, 255, 255, 0.04);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+/* 저작권 표기 (작게) */
+.copy {
+  margin: 0;
+  font-size: 0.82rem;
+  opacity: 0.9;
+}
+
+/* 공지 문구(간단한 한 줄 요약) */
+.notice {
+  margin: 0;
+  font-size: 0.82rem;
+  opacity: 0.95;
+}
+
+/* 상세한 법적 고지 (작게, 줄바꿈 허용) */
+.legal {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #cfcfcf;
+  opacity: 0.9;
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 데스크탑 (중간 이상) */
+@media (min-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    text-align: left;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+  }
+
+  .container h4 {
+    font-size: 1.05rem;
+  }
+
+  .links {
+    justify-content: flex-end;
+    gap: 0.75rem;
+  }
+
+  .legal {
+    text-align: right;
+    margin: 0;
+    max-width: 45ch;
+  }
+}
+
+/* 더 큰 화면에서 여백 늘리기 */
+@media (min-width: 1100px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

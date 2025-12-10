@@ -12,6 +12,7 @@ export default function GameItemFarm({ data, message }: FarmData) {
             alt={item.farmName}
             width={150}
             height={150}
+            style={{ borderRadius: "5px" }}
           />
           <div className={style.item_info}>
             <div>{item.farmName}</div>

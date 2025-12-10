@@ -30,7 +30,7 @@ export default async function Page({
     <div className={style.container}>
       <GameDataTag />
       <div className={style.item_container}>
-        <GameMarincaCategory id={id} />
+        <GameMarincaCategory />
         <Searchbar />
         <GameItem {...categoryData} />
       </div>
