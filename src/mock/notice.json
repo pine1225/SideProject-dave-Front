@@ -1,0 +1,84 @@
+{
+  "notice": [
+    {
+      "idx": 1,
+      "title": "🔥블랙프라이데이 초강력 핫딜!🔥데이브 더 다이버 45%, DLC 50% 할인! ",
+      "content": "다이버 여러분!\r\n\r\n블랙프라이데이 핫딜이 드디어 찾아왔습니다!🔥\r\n그동안 머뭇거렸다면 이번 역대 최저가 할인을 통해 블루홀을 만끽하세요!\r\n\r\n\r\n* 블랙 프라이데이 할인은 2025년 12월 1일 오전 2시까지 진행됩니다.\r\n감사합니다!",
+      "writer_seq": 133,
+      "created_at": "2025-12-11 00:22:02",
+      "updated_at": "2025-12-11 00:22:02"
+    },
+    {
+      "idx": 2,
+      "title": "11/17(월) 핫픽스 안내",
+      "content": "다이버 여러분, 안녕하세요!\r\n\r\n\r\n커뮤니티에서 전달해주신 피드백을 반영해 ‘루비 해룡’ 등장 확률을 상향하고 일부 버그를 수정했습니다. 자세한 내용은 아래에서 확인해주세요!\r\n자세한 내용은 아래 본문을 확인해주시기 바랍니다.\r\n\r\n\r\n◈ 업데이트 버전:\r\n\r\n윈도우: v1.0.5.1749\r\n\r\n맥: v1.0.5.611\r\n\r\n\r\n◈ 업데이트 내용\r\n\r\n시스템 개선\r\n\r\n오류 수정\r\n\r\n\r\n\r\n모든 플레이어 대상\r\n<시스템 개선사항>\r\n1) 바다 탐험\r\n\r\n루비 해룡의 등장 확률을 상향 조정하였습니다.\r\n\r\n\r\n<오류 수정 사항>\r\n1) 미션 관련\r\n\r\n특정 미션 중에 등장하는 비악상어 사냥 시 에코워쳐 카운트가 정상적으로 반영되지 않던 문제를 수정하였습니다.\r\n\r\n[Chapter 5 진입 이후] '세번째 제어실 스위치' 미션 진행 중 특정 상황에서 고드름이 떨어지지 않던 문제를 수정하였습니다.\r\n\r\n[Chapter 6 진입 이후] '씨블루 기지 잠입 작전' 미션 진행 중 입수 시 일시적으로 어둡게 보이던 문제를 수정하였습니다.\r\n\r\n2) 초밥집 관련\r\n\r\n특정 VIP 요리대전에서 재도전 시, 스테이지 진행률 UI가 초기화되지 않던 문제를 수정하였습니다.\r\n\r\n3) 보스 관련\r\n\r\n일부 보스들이 먹물탄 효과에 면역되지 않던 문제를 수정하였습니다.\r\n\r\n거대 가돈 보스전 진행 중 탐색 버튼을 눌러도 UI가 작동하지 않던 문제를 수정하였습니다.\r\n\r\n4) 어인족 마을 관련\r\n\r\n벨루가 택시 탑승 중 일부 기능을 이용할 수 없던 문제를 수정하였습니다.\r\n\r\n특정 상황에서 니아모의 대사가 출력되지 않던 문제를 수정하였습니다.\r\n\r\n5) 기타 수정 사항\r\n\r\n부정적으로 느껴질 수 있던 일부 텍스트의 톤을 조정하였습니다\r\n\r\n게임 진행 중 애니메이션 연출이나 다이얼로그, 사운드 등 어색하거나 부자연스럽던 부분들을 수정하였습니다.\r\n\r\n\r\nDREDGE Content Pack 보유 대상자\r\nDLC를 삭제한 뒤에도 메뉴/재료 탭의 정렬 기준에 '돌연변이 메뉴 표시' 항목이 노출되던 문제를 수정하였습니다.\r\n\r\n \r\n\r\n이치반의 휴일 Content Pack 보유 대상자\r\n초밥집에서 직원 레벨 20달성 후 다음 날 오전 쿡스타에 바로 등록되지 않던 문제를 수정하였습니다.\r\n\r\n\r\n\r\n📌추가 안내 사항\r\n업데이트 이후 크래시 문제, 멈춤 현상, 그래픽 깨짐현상 같은 문제 발생될 경우, [파일 무결성 검사] 가이드에 따라 진행해주시기 바랍니다.\r\n\r\n지속적으로 문제가 발생한 경우 공식 디스코드 채널을 통해 문의해주시기 바랍니다.\r\n\r\n문의 접수 시 OS 환경에 따라 아래 경로의 모든 파일을 압축해서 보내주세요.\r\n\r\n윈도우:\r\n%LocalAppData%/../LocalLow/nexon/DAVE THE DIVER\r\n\r\n맥 OS:\r\n~/Library/Logs/nexon/DAVE THE DIVER/Player.log\r\n~/Library/Application Support/nexon/DAVE THE DIVER/SData\r\nor\r\n~/Library/Application Support/com.nexon.dave/DAVE THE DIVER/SData\r\n\r\n스팀 덱:\r\n./.local/share/Steam/steamapps/compatdata/1868140/pfx/drive_c/users/steamuser/AppData/LocalLow/nexon/DAVE THE DIVER\r\n\r\n\r\n◈ 참고 사항\r\n업데이트 내용 중 변경되는 부분이 있으면 본 공지를 통해 다시 안내 드리겠습니다.\r\n\r\n데이브 더 다이버를 최신버전으로 업데이트 하셔야 변경사항이 적용됩니다.\r\n\r\n\r\n데이브 더 다이버는 여러분의 애정과 관심으로 함께 만들어집니다. 여러분의 소중한 의견에 감사드리며,\r\n\r\n안전하고 즐거운 다이빙 되시길 바랍니다.\r\n\r\n\r\n감사합니다.",
+      "writer_seq": 133,
+      "created_at": "2025-12-11 00:24:47",
+      "updated_at": "2025-12-11 00:24:47"
+    },
+    {
+      "idx": 3,
+      "title": "데이브 & 반쵸 인형 Makeship에서 기간 한정 출시!",
+      "content": "데이브와 반쵸가 말랑하고 귀여운 인형으로 찾아왔습니다!\r\n\r\n미국 Makeship사가 제작한 폭신한 친구들이 여러분의 하루를 더욱 특별하게 만들어줄 거예요.\r\n\r\n블루홀의 귀여운 친구들은 11월 11일까지만 한정으로 판매됩니다!\r\n\r\n※ 주문 누락 등 문제가 발생한 경우, 메이크쉽으로 문의 주시면 상세한 도움을 받으실 수 있습니다. ",
+      "writer_seq": 133,
+      "created_at": "2025-12-11 00:25:58",
+      "updated_at": "2025-12-11 00:25:58"
+    },
+    {
+      "idx": 4,
+      "title": "10/01(수) 핫픽스 안내",
+      "content": "안녕하세요, 다이버 여러분,\r\n\r\n\r\n9/26(금) 업데이트 이후 일부 환경에서 강제 종료되는 현상과, \r\n\r\nMac 환경에서 컨트롤러가 인식되지 않은 문제를 수정하기 위한 패치가 진행되었습니다.\r\n\r\n\r\n자세한 내용은 아래 본문을 확인해주시기 바랍니다.\r\n\r\n\r\n◈ 업데이트 버전:\r\n\r\n윈도우: v1.0.5.1733\r\n\r\n맥: v1.0.5.603\r\n\r\n\r\n◈ 업데이트 내용\r\n\r\n오류 수정\r\n\r\n\r\n<오류 수정 사항>\r\n일부 환경에서 간헐적으로 발생됐던 강제 종료 현상을 개선하였습니다.\r\n\r\n이후 유사한 문제 발생 시 제보 부탁드립니다.\r\n\r\nMac 환경에서 XBOX 컨트롤러가 인식되지 않는 문제를 수정하였습니다.\r\n\r\n* 이번 업데이트는 v1.0.5.1726에 진행된 수정 내용도 모두 포함됩니다. [패치노트 바로가기]\r\n\r\n\r\n\r\n📌추가 안내 사항\r\n업데이트 이후 크래시 문제, 멈춤 현상, 그래픽 깨짐현상 같은 문제 발생될 경우, [파일 무결성 검사] 가이드에 따라 진행해주시기 바랍니다.\r\n\r\n지속적으로 문제가 발생한 경우 공식 디스코드 채널을 통해 문의해주시기 바랍니다.\r\n\r\n문의 접수 시 OS 환경에 따라 아래 경로의 모든 파일을 압축해서 보내주세요.\r\n\r\n윈도우:\r\n%LocalAppData%/../LocalLow/nexon/DAVE THE DIVER\r\n\r\n맥 OS:\r\n~/Library/Logs/nexon/DAVE THE DIVER/Player.log\r\n~/Library/Application Support/nexon/DAVE THE DIVER/SData\r\nor\r\n~/Library/Application Support/com.nexon.dave/DAVE THE DIVER/SData\r\n\r\n스팀 덱:\r\n./.local/share/Steam/steamapps/compatdata/1868140/pfx/drive_c/users/steamuser/AppData/LocalLow/nexon/DAVE THE DIVER\r\n\r\n\r\n◈ 참고 사항\r\n업데이트 내용 중 변경되는 부분이 있으면 본 공지를 통해 다시 안내 드리겠습니다.\r\n\r\n데이브 더 다이버를 최신버전으로 업데이트 하셔야 변경사항이 적용됩니다.\r\n\r\n\r\n데이브 더 다이버는 여러분의 애정과 관심으로 함께 만들어집니다. 여러분의 소중한 의견에 감사드리며,\r\n\r\n안전하고 즐거운 다이빙 되시길 바랍니다.\r\n\r\n\r\n감사합니다.",
+      "writer_seq": 133,
+      "created_at": "2025-12-11 00:26:24",
+      "updated_at": "2025-12-11 00:26:24"
+    },
+    {
+      "idx": 5,
+      "title": "낭만 넘치는 가을 할인🍂 데이브 더 다이버 40% & DLC 50% 세일!",
+      "content": "안녕하세요 다이버 여러분!\r\n\r\n스팀 가을 할인 행사가 찾아왔습니다!🍁\r\n데이브 더 다이버의 특별한 할인으로 노을지는 가을 바다를 즐겨보세요!\r\n\r\n감사합니다!",
+      "writer_seq": 133,
+      "created_at": "2025-12-11 00:27:19",
+      "updated_at": "2025-12-11 00:27:19"
+    },
+    {
+      "idx": 6,
+      "title": "[Windows 한정] 09/28(일) 핫픽스 안내",
+      "content": "다이버 여러분 안녕하세요!\r\n\r\n\r\n9/26(금) 업데이트 이후 윈도우 환경에서 크래시가 발생되는 문제가 확인되었습니다.\r\n\r\n원활한 플레이를 위해 이전 버전으로 다시 적용하는 업데이트가 진행되었습니다.\r\n\r\n원인을 빠르게 수정한 후 다시 업데이트를 진행할 예정입니다.\r\n\r\n문제를 겪으신 다이버 분들께서는 업데이트 후 게임 이용 부탁드립니다.\r\n\r\n\r\n감사합니다.\r\n\r\n* 업데이트는 윈도우 버전만 해당됩니다.",
+      "writer_seq": 133,
+      "created_at": "2025-12-11 00:27:35",
+      "updated_at": "2025-12-11 00:27:35"
+    },
+    {
+      "idx": 7,
+      "title": "[macOS 한정] 09/27(토) 핫픽스 안내",
+      "content": "다이버 여러분 안녕하세요!\r\n\r\n\r\n9/26(금) 업데이트 이후 Mac 환경에서 XBOX 컨트롤러가 인식되지 않는 문제가 확인되었습니다.\r\n\r\n원활한 플레이를 위해 이전 버전으로 다시 적용하는 업데이트가 진행되었으니,\r\n\r\n문제를 겪으신 다이버 분들께서는 업데이트 후 게임 이용 부탁드립니다.\r\n\r\n \r\n\r\n감사합니다.\r\n\r\n\r\n* 업데이트는 Mac 버전만 해당됩니다.",
+      "writer_seq": 133,
+      "created_at": "2025-12-11 00:27:49",
+      "updated_at": "2025-12-11 00:27:49"
+    },
+    {
+      "idx": 8,
+      "title": "09/26(금) 핫픽스 안내",
+      "content": "안녕하세요, 다이버 여러분!\r\n\r\n게임 진행 중 발견된 일부 버그를 수정하기 위한 핫픽스 업데이트가 진행되었습니다.\r\n\r\n자세한 내용은 아래 본문을 확인해주시기 바랍니다.\r\n\r\n\r\n◈ 업데이트 버전:\r\n\r\n윈도우: v1.0.5.1726\r\n\r\n맥: v1.0.5.599\r\n\r\n\r\n◈ 업데이트 내용\r\n\r\n버그 수정\r\n\r\n\r\n\r\n<오류 수정 사항>\r\n1) 미션 관련\r\n\r\n[Chapter 5 진입 이후] '코브라의 잃어버린 빠루' 미션 완료 후 ‘거울’이나 ‘배로 나가기’ 기능을 사용할 수 없던 문제를 수정하였습니다.\r\n\r\n[Chapter 6 진입 이후] '풍화된 고대 석판' 미션 진행 중 산소가 평소보다 빠르게 소모되는 문제를 수정하였습니다.\r\n\r\n“돌고래에게 무슨 일이?” 미션 진행 중 특정 연출 장면 직전에 돌고래의 위치가 변경되는 문제를 수정하였습니다.\r\n\r\n일부 미션의 특정 장면에서 상황에 맞지 않는 다이빙 슈트가 표시되던 문제를 수정하였습니다.\r\n\r\n2) 초밥집 관련\r\n\r\n[Chapter 6 진입 이후] 파스트로와 VIP 요리 대결 진행 중 요리 재료가 이상한 위치에 보이던 문제를 수정하였습니다.\r\n\r\n[Chapter 6 진입 이후] 파스트로와 VIP 요리 대결 진행 중 자동으로 다음 스테이지에 넘어가지 않던 문제를 수정했습니다.\r\n\r\n[Chapter 6 진입 이후] 영업 중 분점에서 표시되지 않아야 하는 UI가 표시되는 문제를 수정하였습니다.\r\n\r\n3) 기타 수정사항\r\n\r\n주간 피쉬, 피쉬 트래커 콘텐츠가 의도하지 않은 시점에 해금되던 문제를 수정하였습니다.\r\n\r\n[Chapter 4 진입 이후] 갸오가 진화한 직후 훈육 수행 시 애니메이션이 재생되지 않던 문제를 수정하였습니다.\r\n\r\n두와의 대장간에서 마우스로 구매/판매 탭을 전환할 수 없던 문제를 수정하였습니다.\r\n\r\n\r\n\r\n📌추가 안내 사항\r\n업데이트 이후 크래시 문제, 멈춤 현상, 그래픽 깨짐현상 같은 문제 발생될 경우, [파일 무결성 검사] 가이드에 따라 진행해주시기 바랍니다.\r\n\r\n지속적으로 문제가 발생한 경우 공식 디스코드 채널을 통해 문의해주시기 바랍니다.\r\n\r\n문의 접수 시 OS 환경에 따라 아래 경로의 모든 파일을 압축해서 보내주세요.\r\n\r\n윈도우:\r\n%LocalAppData%/../LocalLow/nexon/DAVE THE DIVER\r\n\r\n맥 OS:\r\n~/Library/Logs/nexon/DAVE THE DIVER/Player.log\r\n~/Library/Application Support/nexon/DAVE THE DIVER/SData\r\nor\r\n~/Library/Application Support/com.nexon.dave/DAVE THE DIVER/SData\r\n\r\n스팀 덱:\r\n./.local/share/Steam/steamapps/compatdata/1868140/pfx/drive_c/users/steamuser/AppData/LocalLow/nexon/DAVE THE DIVER\r\n\r\n\r\n◈ 참고 사항\r\n업데이트 내용 중 변경되는 부분이 있으면 본 공지를 통해 다시 안내 드리겠습니다.\r\n\r\n데이브 더 다이버를 최신버전으로 업데이트 하셔야 변경사항이 적용됩니다.\r\n\r\n\r\n데이브 더 다이버는 여러분의 애정과 관심으로 함께 만들어집니다. 여러분의 소중한 의견에 감사드리며,\r\n\r\n안전하고 즐거운 다이빙 되시길 바랍니다.\r\n\r\n\r\n감사합니다.",
+      "writer_seq": 133,
+      "created_at": "2025-12-11 00:28:51",
+      "updated_at": "2025-12-11 00:28:51"
+    },
+    {
+      "idx": 9,
+      "title": "09/02(화) 핫픽스 안내",
+      "content": "안녕하세요, 다이버 여러분!\r\n\r\n'이치반의 휴일 DLC'의 전투 밸런스 조정을 위한 업데이트를 진행하였습니다.\r\n\r\n자세한 내용은 아래 본문을 확인해주시기 바랍니다.\r\n\r\n\r\n◈ 업데이트 버전:\r\n\r\n윈도우: v1.0.5.1702\r\n\r\n맥: v1.0.5.595\r\n\r\n\r\n◈ 업데이트 내용\r\n\r\n이치반의 휴일 DLC 개선\r\n\r\n\r\n이치반의 휴일 DLC 보유 대상자\r\n\r\n<개선사항>\r\n유저 피드백을 반영하여 조작감과 버튼 배치를 개선하였습니다.   \r\n\r\n필살기 사용 방식을 키 동시 입력에서 단일 키 입력으로 개선\r\n\r\n키보드: Ctrl\r\n\r\n컨트롤러\r\n\r\nXBOX, Nintendo Switch: B 버튼\r\n\r\nPlayStation: O 버튼\r\n\r\n캐릭터 이동속도 증가\r\n\r\n캐릭터의 기본 공격 딜레이 감소\r\n\r\n점프와 공격을 동시 입력 시 간헐적으로 입력되지 않던 문제 수정\r\n\r\n\r\n📌추가 안내 사항\r\n업데이트 이후 크래시 문제, 멈춤 현상, 그래픽 깨짐현상 같은 문제 발생될 경우, [파일 무결성 검사] 가이드에 따라 진행해주시기 바랍니다.\r\n\r\n지속적으로 문제가 발생한 경우 공식 디스코드 채널을 통해 문의해주시기 바랍니다.\r\n\r\n문의 접수 시 OS 환경에 따라 아래 경로의 모든 파일을 압축해서 보내주세요.\r\n\r\n윈도우:\r\n%LocalAppData%/../LocalLow/nexon/DAVE THE DIVER\r\n\r\n맥 OS:\r\n~/Library/Logs/nexon/DAVE THE DIVER/Player.log\r\n~/Library/Application Support/nexon/DAVE THE DIVER/SData\r\nor\r\n~/Library/Application Support/com.nexon.dave/DAVE THE DIVER/SData\r\n\r\n스팀 덱:\r\n./.local/share/Steam/steamapps/compatdata/1868140/pfx/drive_c/users/steamuser/AppData/LocalLow/nexon/DAVE THE DIVER\r\n\r\n\r\n◈ 참고 사항\r\n업데이트 내용 중 변경되는 부분이 있으면 본 공지를 통해 다시 안내 드리겠습니다.\r\n\r\n데이브 더 다이버를 최신버전으로 업데이트 하셔야 변경사항이 적용됩니다.\r\n\r\n\r\n데이브 더 다이버는 여러분의 애정과 관심으로 함께 만들어집니다. 여러분의 소중한 의견에 감사드리며,\r\n\r\n안전하고 즐거운 다이빙 되시길 바랍니다.\r\n\r\n\r\n감사합니다.",
+      "writer_seq": 133,
+      "created_at": "2025-12-11 00:29:22",
+      "updated_at": "2025-12-11 00:29:22"
+    },
+    {
+      "idx": 10,
+      "title": "08/18(월) 핫픽스 안내",
+      "content": "다이버 여러분 안녕하세요!\r\n\r\nv1.0.5.1674 업데이트 이후 스팀 덱에서 실행되지 않는 문제가 확인되어\r\n안정적인 플레이 환경을 위해 이전 버전으로 다시 적용하는 업데이트를 진행하였습니다.\r\n\r\n기본적인 게임 플레이는 문제 없으나, 성게류 양식 반영 등 일부 컨텐츠에 영향이 있을 수 있습니다.\r\n양해 부탁드리며, 빠른 시일 내로 업데이트 후 다시 안내 드리겠습니다.\r\n\r\n감사합니다.\r\n\r\n* 업데이트는 Windows 버전만 해당됩니다.",
+      "writer_seq": 133,
+      "created_at": "2025-12-11 00:29:40",
+      "updated_at": "2025-12-11 00:29:40"
+    }
+  ]
+}
