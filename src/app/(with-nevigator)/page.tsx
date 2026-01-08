@@ -1,10 +1,55 @@
+"use client";
+
 import style from "./page.module.css";
 import notice from "@/mock/notice.json";
 import board from "@/mock/board.json";
 import Image from "next/image";
 import Link from "next/link";
+import { use, useState } from "react";
+
+const images = [
+  "/assets/game-img-download/No_Logo_Ver/DaveTheDiver_Illust01.jpg",
+  "/assets/game-img-download/No_Logo_Ver/DaveTheDiver_Illust02.jpg",
+  "/assets/game-img-download/No_Logo_Ver/DaveTheDiver_illust_03.jpg",
+  "/assets/game-img-download/No_Logo_Ver/DaveTheDiver_illust_04.png",
+];
+
+const extendedImages = [...images, images[0]];
 
 export default function Home() {
+  const [current, setCurrent] = useState(0);
+  const [transition, setTransition] = useState(true);
+
+  // const prev = () => {
+  //   setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  // };
+
+  const prev = () => {
+    if (current === 0) {
+      setTransition(false);
+      setCurrent(images.length - 1);
+      requestAnimationFrame(() => {
+        setTransition(true);
+      });
+    } else {
+      setCurrent((prev) => prev - 1);
+    }
+  };
+
+  const next = () => {
+    // setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setTransition(true);
+    setCurrent((prev) => prev + 1);
+  };
+
+  const handleTransitionEnd = () => {
+    if (current === images.length) {
+      // 애니메이션 없이 처음으로 점프
+      setTransition(false);
+      setCurrent(0);
+    }
+  };
+
   return (
     <div>
       <div className={style.main_video}>
@@ -32,8 +77,8 @@ export default function Home() {
             <Image
               src={"/assets/logo/steam_logo.png"}
               alt="String Logo"
-              width={250}
-              height={80}
+              width={260}
+              height={90}
             />
           </Link>
           <Link
@@ -43,8 +88,8 @@ export default function Home() {
             <Image
               src={"/assets/logo/nintendo_logo.png"}
               alt="String Logo"
-              width={250}
-              height={80}
+              width={260}
+              height={90}
             />
           </Link>
           <Link
@@ -54,8 +99,8 @@ export default function Home() {
             <Image
               src={"/assets/logo/ps_logo.png"}
               alt="String Logo"
-              width={250}
-              height={80}
+              width={260}
+              height={90}
             />
           </Link>
         </div>
@@ -68,45 +113,78 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className={style.youtube}>
-        <iframe
-          width={560}
-          height={315}
-          src="https://www.youtube.com/embed/X0hGViOxcBw"
-          title="Youtube"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        ></iframe>
-        <iframe
-          width={560}
-          height={315}
-          src="https://www.youtube.com/embed/kqY3iz-m2qo"
-          title="Youtube"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        ></iframe>
-        <iframe
-          width={560}
-          height={315}
-          src="https://www.youtube.com/embed/3yMR-2k127U"
-          title="Youtube"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        ></iframe>
-        <iframe
-          width={560}
-          height={315}
-          src="https://www.youtube.com/embed/SiM4yQu5D6o"
-          title="Youtube"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        ></iframe>
+      <div className={style.youtube_content}>
+        <div className={style.youtube}>
+          <iframe
+            width={280}
+            height={180}
+            src="https://www.youtube.com/embed/X0hGViOxcBw"
+            title="Youtube"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+          <iframe
+            width={280}
+            height={180}
+            src="https://www.youtube.com/embed/kqY3iz-m2qo"
+            title="Youtube"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+          <iframe
+            width={280}
+            height={180}
+            src="https://www.youtube.com/embed/3yMR-2k127U"
+            title="Youtube"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+          <iframe
+            width={280}
+            height={180}
+            src="https://www.youtube.com/embed/SiM4yQu5D6o"
+            title="Youtube"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+        </div>
       </div>
       <div className={style.end_content}>
-        <div className={style.game_img}>
+        {/* <div className={style.game_img}>
+          <button onClick={prev}>◀</button>
           <Image
-            src="/assets/game-img-download/No_Logo_Ver/DaveTheDiver_Illust01.jpg"
+            // src="/assets/game-img-download/No_Logo_Ver/DaveTheDiver_Illust01.jpg"
+            src={images[current]}
             alt="game-img"
             width={700}
             height={400}
           />
+          <button onClick={next}>▶</button>
+        </div> */}
+
+        <div className={style.slider}>
+          <button className="arrow left" onClick={prev}>
+            ◀
+          </button>
+
+          <div className={style.viewport}>
+            <div
+              className={style.track}
+              onTransitionEnd={handleTransitionEnd}
+              style={{
+                transform: `translateX(-${current * 100}%)`,
+                transition: transition ? "transform 0.3s ease" : "none",
+              }}
+            >
+              {extendedImages.map((src, i) => (
+                <div className={style.slide} key={i}>
+                  <Image src={src} alt="" fill />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <button className="arrow right" onClick={next}>
+            ▶
+          </button>
         </div>
+
         <div className={style.game_explain}>
           <div>
             <h4>매력적인 2D/3D 아트로 구현한 환상적인 해양 생태계</h4>
