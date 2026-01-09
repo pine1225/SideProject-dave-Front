@@ -16,7 +16,14 @@ export default function RootLayout({
       <body>
         <Nevigator />
         {children}
-        <Footer />
+        <div
+          style={{
+            width: "100%",
+            backgroundColor: "#448be5",
+          }}
+        >
+          <Footer />
+        </div>
       </body>
     </html>
   );

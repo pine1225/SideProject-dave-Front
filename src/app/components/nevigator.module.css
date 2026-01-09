@@ -4,6 +4,9 @@
   /* background-color: #073856; */
   background-color: #fff;
   font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav_left {

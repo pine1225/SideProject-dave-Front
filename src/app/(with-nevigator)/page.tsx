@@ -5,7 +5,7 @@ import notice from "@/mock/notice.json";
 import board from "@/mock/board.json";
 import Image from "next/image";
 import Link from "next/link";
-import { use, useState } from "react";
+import { use, useEffect, useRef, useState } from "react";
 
 const images = [
   "/assets/game-img-download/No_Logo_Ver/DaveTheDiver_Illust01.jpg",
@@ -16,37 +16,104 @@ const images = [
 
 const extendedImages = [...images, images[0]];
 
+const title = [
+  "매력적인 2D/3D 아트로 구현한 환상적인 해양 생태계",
+  "작살 포획 액션과 거대 해양 생물 전투",
+  "개성적인 캐릭터와 위트 있는 스토리",
+  "다양한 게임성의 적절한 결합",
+];
+const descriptions = [
+  "픽셀과 3D로 아름다운 바다 환경을 표현한 독특한 아트 스타일이 특징이다. 블루홀을 배경으로 한 바다의 공간감 속 약 200여종의 해양생물이 등장하여 실제 바다를 기반으로 한 환상적인 해양 생태계 체험을 할 수 있다.",
+  "작살을 통해 신비한 블루홀에 살고 있는 다양한 생물을 포획할 수 있다. 또한 공격성이 강한 어종 및 거대 해양 생물의 위협을 피하면서 다양한 무기를 통해 선보이는 액션 전투와, 이를 제작/강화하여 성장을 통하여 허들을 극복하는 재미를 선사한다.",
+  "강렬한 개성의 캐릭터를 전면에 내세워 유머러스하고 역동적인 컷씬과 함께 스토리 몰입도를 증가시킨다. 다이버 ‘데이브’가 되어 동료들과 함께 블루홀에서 어인족 문명을 조사 중인 고고학자 베이컨 박사를 도와 전설 속의 해저 어인족 문명에 대해 조사하며 블루홀에 얽힌 환경에 대한 비밀도 파헤칠 수 있다.",
+  "‘데이브 더 다이버’의 컨텐츠는 크게 ‘블루홀 탐사’와 ‘초밥집 운영’ 두 가지로 나뉜다. 낮 시간 동안 2회까지 블루홀 탐사를 진행할 수 있으며, 이후 밤이 되면 낮 동안 포획한 물고기 및 재료 등을 사용하여 초밥집을 운영하여 자금을 모을 수 있다. 초밥집에서 모은 자금을 사용하여 장비를 업그레이드하고 더 깊은 곳을 탐사할 수 있게 되며, 깊은 곳에서 포획한 물고기 및 재료는 초밥집에서 더 높은 가격으로 판매가 가능하다. 두 가지 장르의 게임성을 결합하여 게임의 완급 및 다양한 재미를 제공하며, 게임에서 습득한 아이템이 사망 시 사라지는 로그라이크적 재미도 갖고 있는 하이브리드 장르의 게임이다.",
+];
+
 export default function Home() {
   const [current, setCurrent] = useState(0);
   const [transition, setTransition] = useState(true);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [page, setPage] = useState(0);
+  const [isHover, setIsHover] = useState(false);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const PAGE_SIZE = 2;
+  const TOTAL_PAGE = Math.ceil(title.length / PAGE_SIZE);
+
+  const start = page * PAGE_SIZE;
+
+  const visibleTitles = title.slice(start, start + PAGE_SIZE);
+  const visibleDescriptions = descriptions.slice(start, start + PAGE_SIZE);
+
+  const startAuto = () => {
+    if (intervalRef.current) return;
+
+    intervalRef.current = setInterval(() => {
+      setPage((prev) => (prev + 1) % TOTAL_PAGE);
+    }, 4000);
+  };
+
+  const stopAuto = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
+  useEffect(() => {
+    startAuto();
+    return stopAuto;
+  }, []);
 
   // const prev = () => {
   //   setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   // };
 
   const prev = () => {
+    if (isAnimating) return;
+
+    setIsAnimating(true);
+
     if (current === 0) {
       setTransition(false);
-      setCurrent(images.length - 1);
+      setCurrent(images.length);
+
       requestAnimationFrame(() => {
-        setTransition(true);
+        requestAnimationFrame(() => {
+          setTransition(true);
+          setCurrent(images.length - 1);
+        });
       });
     } else {
+      setTransition(true);
       setCurrent((prev) => prev - 1);
     }
   };
 
   const next = () => {
     // setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+
+    if (isAnimating) return;
+
+    setIsAnimating(true);
     setTransition(true);
     setCurrent((prev) => prev + 1);
   };
 
   const handleTransitionEnd = () => {
     if (current === images.length) {
-      // 애니메이션 없이 처음으로 점프
+      // 마지막 clone → 첫 이미지로 스냅
       setTransition(false);
       setCurrent(0);
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setTransition(true);
+          setIsAnimating(false);
+        });
+      });
+    } else {
+      setIsAnimating(false);
     }
   };
 
@@ -55,21 +122,35 @@ export default function Home() {
       <div className={style.main_video}>
         <video
           src="/assets/game-img/DaveTheDiver.mp4"
+          // src="/assets/game-img/DAVE THE DIVER_Accolades Trailer_1min.mp4"
           autoPlay
           loop
           muted
           playsInline
         ></video>
+        <div className={style.video_overlay}>
+          <p>
+            신비한 블루홀을 배경으로 한 해양 어드벤처 게임
+            <br />
+            데이브 더 다이버
+            {/* <br />
+            낮에는 바닷속에서 사냥을, 밤에는 초밥집을 운영하며 성장!
+            <br />
+            개성 강한 동료들의 이야기와 함께 펼쳐지는 바닷속 수수께끼! */}
+          </p>
+        </div>
       </div>
       <div className={style.middle_content}>
         <div className={style.notice}>
+          <p>공지사항</p>
           {notice.notice.map((item) => (
-            <div key={item.idx}>
+            <div key={item.idx} className={style.notice_title}>
               <div>{item.title}</div>
             </div>
           ))}
         </div>
         <div className={style.game_start}>
+          <p>GAME START</p>
           <Link
             href={"https://store.steampowered.com/app/1868140/_/"}
             target="_blank"
@@ -77,8 +158,8 @@ export default function Home() {
             <Image
               src={"/assets/logo/steam_logo.png"}
               alt="String Logo"
-              width={260}
-              height={90}
+              width={220}
+              height={80}
             />
           </Link>
           <Link
@@ -88,8 +169,8 @@ export default function Home() {
             <Image
               src={"/assets/logo/nintendo_logo.png"}
               alt="String Logo"
-              width={260}
-              height={90}
+              width={220}
+              height={80}
             />
           </Link>
           <Link
@@ -99,14 +180,14 @@ export default function Home() {
             <Image
               src={"/assets/logo/ps_logo.png"}
               alt="String Logo"
-              width={260}
-              height={90}
+              width={220}
+              height={80}
             />
           </Link>
         </div>
         <div className={style.board}>
           {board.board.map((item, i) => (
-            <div key={i}>
+            <div key={i} className={style.board_content}>
               <div>{item.content}</div>
               <div></div>
             </div>
@@ -159,10 +240,6 @@ export default function Home() {
         </div> */}
 
         <div className={style.slider}>
-          <button className="arrow left" onClick={prev}>
-            ◀
-          </button>
-
           <div className={style.viewport}>
             <div
               className={style.track}
@@ -180,54 +257,40 @@ export default function Home() {
             </div>
           </div>
 
-          <button className="arrow right" onClick={next}>
+          <button
+            className={`${style.arrow_left} arrow`}
+            onClick={prev}
+            disabled={isAnimating}
+          >
+            ◀
+          </button>
+
+          <button
+            className={`${style.arrow_right} arrow`}
+            onClick={next}
+            disabled={isAnimating}
+          >
             ▶
           </button>
         </div>
 
-        <div className={style.game_explain}>
-          <div>
-            <h4>매력적인 2D/3D 아트로 구현한 환상적인 해양 생태계</h4>
-            <p>
-              픽셀과 3D로 아름다운 바다 환경을 표현한 독특한 아트 스타일이
-              특징이다. 블루홀을 배경으로 한 바다의 공간감 속 약 200여종의 해양
-              생물이 등장하여 실제 바다를 기반으로 한 환상적인 해양 생태계
-              체험을 할 수 있다.
-            </p>
-          </div>
-          <div>
-            <h4>작살 포획 액션과 거대 해양 생물 전투</h4>
-            <p>
-              작살을 통해 신비한 블루홀에 살고 있는 다양한 생물을 포획할 수
-              있다. 또한 공격성이 강한 어종 및 거대 해양 생물의 위협을 피하면서
-              다양한 무기를 통해 선보이는 액션 전투와, 이를 제작/강화하여 성장을
-              통하여 허들을 극복하는 재미를 선사한다.
-            </p>
-          </div>
-          <div>
-            <h4>개성적인 캐릭터와 위트 있는 스토리</h4>
-            <p>
-              강렬한 개성의 캐릭터를 전면에 내세워 유머러스하고 역동적인 컷씬과
-              함께 스토리 몰입도를 증가시킨다. 다이버 ‘데이브’가 되어 동료들과
-              함께 블루홀에서 어인족 문명을 조사 중인 고고학자 베이컨 박사를
-              도와 전설 속의 해저 어인족 문명에 대해 조사하며 블루홀에 얽힌
-              환경에 대한 비밀도 파헤칠 수 있다.
-            </p>
-          </div>
-          <div>
-            <h4>다양한 게임성의 적절한 결합</h4>
-            <p>
-              ‘데이브 더 다이버’의 컨텐츠는 크게 ‘블루홀 탐사’와 ‘초밥집 운영’
-              두 가지로 나뉜다. 낮 시간 동안 2회까지 블루홀 탐사를 진행할 수
-              있으며, 이후 밤이 되면 낮 동안 포획한 물고기 및 재료 등을 사용하여
-              초밥집을 운영하여 자금을 모을 수 있다. 초밥집에서 모은 자금을
-              사용하여 장비를 업그레이드하고 더 깊은 곳을 탐사할 수 있게 되며,
-              깊은 곳에서 포획한 물고기 및 재료는 초밥집에서 더 높은 가격으로
-              판매가 가능하다. 두 가지 장르의 게임성을 결합하여 게임의 완급 및
-              다양한 재미를 제공하며, 게임에서 습득한 아이템이 사망 시 사라지는
-              로그라이크적 재미도 갖고 있는 하이브리드 장르의 게임이다.
-            </p>
-          </div>
+        <div
+          className={`${style.textPager} ${isHover ? style.hover : ""}`}
+          onMouseEnter={() => {
+            setIsHover(true);
+            stopAuto();
+          }}
+          onMouseLeave={() => {
+            setIsHover(false);
+            startAuto();
+          }}
+        >
+          {visibleTitles.map((t, i) => (
+            <div key={i} className={style.textBlock}>
+              <h3 className={style.title}>{t}</h3>
+              <p className={style.description}>{visibleDescriptions[i]}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
