@@ -2,10 +2,12 @@
   list-style: none;
   font-weight: bold;
   font-size: 18px;
-  background-color: white;
+  background-color: #216589;
   width: 110px;
   padding: 20px 10px;
   margin: 0;
+  color: white;
+  border-radius: 20px;
 }
 
 .tag li:not(:first-child) {
@@ -15,4 +17,6 @@
 
 .tag li a {
   display: block;
+  color: white;
+  text-decoration: none;
 }

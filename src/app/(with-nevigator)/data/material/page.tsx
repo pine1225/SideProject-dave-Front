@@ -3,6 +3,7 @@ import GameItemMaterial from "@/app/components/game-item-material";
 import SearchbarMaterial from "@/app/components/searchbar-material";
 import { notFound } from "next/navigation";
 import style from "./page.module.css";
+import Image from "next/image";
 
 export default async function Page() {
   const response = await fetch(
@@ -20,11 +21,24 @@ export default async function Page() {
   const { data, message } = allData;
 
   return (
-    <div className={style.container}>
-      <GameDataTag />
-      <div className={style.item_container}>
-        <SearchbarMaterial />
-        <GameItemMaterial {...allData} />
+    <div>
+      <div className={style.banner_outer}>
+        <div className={style.image_wrap}>
+          <Image
+            fill
+            priority
+            alt="img"
+            quality={90}
+            src="/assets/game-img-download/No_Logo_Ver/DaveTheDiver_ScreenShot_010.png"
+          />
+        </div>
+      </div>
+      <div className={style.container}>
+        <GameDataTag />
+        <div className={style.item_container}>
+          <SearchbarMaterial />
+          <GameItemMaterial {...allData} />
+        </div>
       </div>
     </div>
   );

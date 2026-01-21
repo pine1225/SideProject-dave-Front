@@ -63,11 +63,24 @@ export default async function Page({
   //   console.log(q);
 
   return (
-    <div className={style.container}>
-      <GameDataTag />
-      <div className={style.item_container}>
-        <Searchbar />
-        <SearchResult q={q || ""} />
+    <div>
+      <div className={style.banner_outer}>
+        <div className={style.image_wrap}>
+          <Image
+            fill
+            priority
+            alt="img"
+            quality={90}
+            src="/assets/game-img-download/No_Logo_Ver/DaveTheDiver_ScreenShot_001.png"
+          />
+        </div>
+      </div>
+      <div className={style.container}>
+        <GameDataTag />
+        <div className={style.item_container}>
+          <Searchbar />
+          <SearchResult q={q || ""} />
+        </div>
       </div>
     </div>
   );

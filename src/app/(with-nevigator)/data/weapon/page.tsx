@@ -6,6 +6,7 @@ import Searchbar from "@/app/components/searchbar";
 import GameItemCategory from "@/app/components/game-item-category";
 import GameItemWeapon from "@/app/components/game-item-weapon";
 import SearchbarWeapon from "@/app/components/searchbar-weapon";
+import Image from "next/image";
 
 export default async function Page() {
   const response = await fetch(
@@ -23,11 +24,24 @@ export default async function Page() {
   const { data, message } = allData;
 
   return (
-    <div className={style.container}>
-      <GameDataTag />
-      <div className={style.main_data}>
-        <SearchbarWeapon />
-        <GameItemWeapon {...allData} />
+    <div>
+      <div className={style.banner_outer}>
+        <div className={style.image_wrap}>
+          <Image
+            fill
+            priority
+            alt="img"
+            quality={90}
+            src="/assets/game-img-download/No_Logo_Ver/DaveTheDiver_ScreenShot_005.png"
+          />
+        </div>
+      </div>
+      <div className={style.container}>
+        <GameDataTag />
+        <div className={style.main_data}>
+          <SearchbarWeapon />
+          <GameItemWeapon {...allData} />
+        </div>
       </div>
     </div>
   );
